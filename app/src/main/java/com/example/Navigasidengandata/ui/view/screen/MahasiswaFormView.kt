@@ -24,4 +24,6 @@ fun MahasiswaFormView(
     var email by remember {
         mutableStateOf("")
     }
+
+    var listData: MutableList<String> = mutableListOf(nim, nama, email)
 }
