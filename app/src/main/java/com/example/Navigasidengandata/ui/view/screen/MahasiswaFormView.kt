@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
@@ -150,6 +151,23 @@ fun MahasiswaFormView(
                     leadingIcon = {
                         Icon(
                             imageVector = Icons.Filled.Person,
+                            contentDescription = ""
+                        )
+                    }
+                )
+
+                Spacer(modifier = Modifier.padding(4.dp))
+
+
+                OutlinedTextField(
+                    modifier = Modifier .fillMaxWidth(),
+                    shape = RoundedCornerShape(50.dp),
+                    value = email,
+                    onValueChange = {email = it},
+                    label = { Text(text = "Masukkan Email") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Email,
                             contentDescription = ""
                         )
                     }
