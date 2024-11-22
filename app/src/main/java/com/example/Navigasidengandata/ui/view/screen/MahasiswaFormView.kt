@@ -7,8 +7,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -114,6 +119,24 @@ fun MahasiswaFormView(
                     text = "Isi Sesuai data yang kamu daftarkan",
                     fontWeight = FontWeight.Light
                 )
+
+                Spacer(modifier = Modifier.padding(4.dp))
+
+
+                OutlinedTextField(
+                    modifier = Modifier .fillMaxWidth(),
+                    shape = RoundedCornerShape(50.dp),
+                    value = nim,
+                    onValueChange = {nim = it},
+                    label = { Text(text = "Nomor Induk Mahasiswa") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Info,
+                            contentDescription = ""
+                        )
+                    }
+                )
+
             }
         }
     }
