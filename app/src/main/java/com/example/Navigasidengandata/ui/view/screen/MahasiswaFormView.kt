@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -137,6 +138,22 @@ fun MahasiswaFormView(
                     }
                 )
 
+                Spacer(modifier = Modifier.padding(4.dp))
+
+
+                OutlinedTextField(
+                    modifier = Modifier .fillMaxWidth(),
+                    shape = RoundedCornerShape(50.dp),
+                    value = nama,
+                    onValueChange = {nama = it},
+                    label = { Text(text = "Masukkan Nama Anda") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Person,
+                            contentDescription = ""
+                        )
+                    }
+                )
             }
         }
     }
